@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
     <header>
         <div id="header"></div>
         <div class="container"> <!-- Added opening tag for container div -->
@@ -38,13 +39,60 @@
                 <img src="Images/user.png">
             </div>
             <div class="about-col-2">
-                <h1>About Me</h1>
-            </div>
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a dedicated and enthusiastic individual with a strong passion for data science. My expertise lies in uncovering meaningful insights
+                from complex datasets through advanced statistical analysis and machine learning techniques.
+                With a proven track record of successfully tackling real-world challenges, I bring proficiency in languages such as Python and R.
+                Eager to contribute to innovative projects and collaborate within the dynamic field of data science,
+                I look forward to leveraging my skills to make a positive impact.</p>
 
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Data Wrangling</span><br>Cleaning and organizing complex data sets</li>
+                        <li><span>Machine learning</span><br>Predicting the outcomes of future data sets</li>
+                        <li><span>Cloud Computing</span><br> Analyze and visualize data that are stored in cloud platforms</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current</span><br>Cloud Computing at Solved Technologies</li>
+                        <li><span>2023 - 2023</span><br>Internship at Prodigy Infotech</li>
+                        <li><span>2022 - 2023</span><br>Software Testing at Solved Technologies</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022</span><br>Data Science at Moringa School</li>
+                        <li><span>2021</span><br>Database Administration and Application Development at Institute of Software Technologies</li>
+                    </ul>
+                </div>
+            </div>
         </div>
      </div>
-     
+ 
+<script>
 
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontents.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
      
 </body>
 </html>
